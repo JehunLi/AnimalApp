@@ -1,67 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/fullscreenBackgroundColor"
-    android:theme="@style/ThemeOverlay.Animalapp.FullscreenContainer"
-    tools:context=".Rogin">
-
-    <!-- The primary full-screen view. This can be replaced with whatever view
-         is needed to present your content, e.g. VideoView, SurfaceView,
-         TextureView, etc. -->
+    android:layout_marginLeft="40dp"
+    android:layout_marginTop="200dp"
+    android:layout_marginRight="30dp"
+    android:layout_marginBottom="30dp"
+    android:orientation="vertical"
+    tools:context=".roginActivity">
     <TextView
-        android:id="@+id/fullscreen_content"
+        android:id="@+id/logintext"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:keepScreenOn="true"
-        android:text="@string/dummy_content"
-        android:textColor="?attr/fullscreenTextColor"
-        android:textSize="50sp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:text="회원 로그인"
+        android:textAlignment="center"
+        android:textColor="#b9a0fe"
+        android:textSize="25dp"
         android:textStyle="bold" />
 
-    <!-- This FrameLayout insets its children based on system windows using
-         android:fitsSystemWindows. -->
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
+    <EditText
+        android:id="@+id/editID"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rogin_button_iamge"
+        android:ems="10"
+        android:hint="아이디"
+        android:inputType="textPersonName"
+        android:text="" />
 
-        <LinearLayout
-            android:id="@+id/fullscreen_content_controls"
-            style="@style/Widget.Theme.Animalapp.ButtonBar.Fullscreen"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="200dp"
-            android:layout_marginBottom="30dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="30dp"
-            android:orientation="vertical"
-            tools:ignore="All">
-            
-            <TextView
-                android:id="@+id/logintext"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:text="회원 로그인"
-                android:textColor="#8b00ff"
-                android:textSize="25dp"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:gravity="center_horizontal" />
+    <EditText
+        android:id="@+id/editPD"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rogin_button_iamge"
+        android:ems="10"
+        android:hint="비밀번호"
+        android:inputType="textPassword" />
 
-            <Button
-                android:id="@+id/dummy_button"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="12dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="10"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rogin_box_image"
+        android:text="로그인"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
-                android:text="@string/dummy_button" />
+    <TextView
+        android:id="@+id/signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="회원가입"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold" />
 
-        </LinearLayout>
-    </FrameLayout>
+    <TextView
+        android:id="@+id/roginsign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Jehun"
+        android:textAlignment="center"
+        android:textColor="#b9a0fe"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
-</FrameLayout>
+</LinearLayout>

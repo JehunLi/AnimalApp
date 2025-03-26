@@ -13,6 +13,18 @@
         android:theme="@style/Theme.Animalapp"
         tools:targetApi="31">
         <activity
+            android:name=".roginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:label="@string/title_activity_fullscreen"
+            android:theme="@style/Theme.Animalapp.Fullscreen" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
             android:name=".Rogin"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="false"
